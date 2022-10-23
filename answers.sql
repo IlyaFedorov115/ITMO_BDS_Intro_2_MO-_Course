@@ -22,3 +22,7 @@ db.student.find({surname:"Smith"}).count()
 
 -- 2
 db.student.find({surname:"Semenov"}, {age:1, _id:0})
+
+
+-- 3
+db.UNDERGROUND.find({Line:/Central/}).count() 
