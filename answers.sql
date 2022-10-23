@@ -16,4 +16,8 @@ HVALS basket:104
 EXPIRE basket:104 300
 TTL basket:104
 
--- 5
+MongoDb
+-- 1
+db.student.find({surname:"Smith"}).count() 
+
+-- 2
