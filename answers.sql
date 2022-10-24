@@ -26,3 +26,15 @@ db.student.find({surname:"Semenov"}, {age:1, _id:0})
 
 -- 3
 db.UNDERGROUND.find({Line:/Central/}).count() 
+
+
+CASSANDRA
+
+-- 1
+SELECT * FROM CARTOON_BY_ID WHERE Cartoon_id=13;
+
+-- 2
+SELECT sum(views) FROM CARTOON_BY_DIRECTOR_ID WHERE director_id =19;
+
+-- 3
+SELECT * FROM CARTOON_BY_COUNTRY WHERE Country = 'USA';  
