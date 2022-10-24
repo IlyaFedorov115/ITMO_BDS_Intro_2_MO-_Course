@@ -38,3 +38,22 @@ SELECT sum(views) FROM CARTOON_BY_DIRECTOR_ID WHERE director_id =19;
 
 -- 3
 SELECT * FROM CARTOON_BY_COUNTRY WHERE Country = 'USA';  
+
+
+Neo4j
+
+-- 1
+MATCH (p:course{name:'Data Analytics'})<-[:learn]-(studs) RETURN studs.name
+
+-- 2
+MATCH (p:course{name:'Statistics'})<-[:learn]-(studs) RETURN studs.name
+Ilia
+Dmitry
+Roman
+Alexandr
+Teresa
+Stas
+Olga
+Victor
+Nina
+Anna
