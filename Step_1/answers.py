@@ -34,3 +34,31 @@ print(f"Total explained variance for the first two components: {total_variance}"
 first_object_coord = X_pca[0, 0]
 print(f"First object's coordinate with respect to the first principal component: {first_object_coord}")
 
+
+
+
+###### Task 2
+
+import numpy as np
+from PIL import Image
+
+# Load the score and weight matrices from the CSV files
+score_matrix = np.loadtxt('X_reduced_456.csv', delimiter=';')
+weight_matrix = np.loadtxt('X_loadings_456.csv', delimiter=';')
+
+# Reconstruct the image using the first ten principal components
+reconstructed_matrix = np.dot(score_matrix, weight_matrix.T)
+
+# Reshape the image matrix to its original shape
+#image = reconstructed_matrix.reshape((height, width))
+
+# Display the reconstructed image using Pillow
+#img = Image.fromarray(image.astype('uint8'), 'RGB')
+image = Image.fromarray(np.uint8(reconstructed_matrix))
+image.save("1.png")
+
+
+
+
+
+
